@@ -5,7 +5,7 @@ require('dotenv').config();
 // Dependencies
 const express = require('express'),
       app = express(),
-      port = process.env.PORT || 8080,
+      port = process.env.PORT || '0.0.0.0' || 5000,
       expressLayouts = require('express-ejs-layouts'),
       mongoose = require('mongoose');
 
