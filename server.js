@@ -26,5 +26,5 @@ app.use(require('./app/routes'));
 
 // Starting Server
 app.listen(port, () => {
-  console.log(`App listening on http://localhost:${port}`);
+  console.log("App is running on port " + port);
 });
