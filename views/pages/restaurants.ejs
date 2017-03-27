@@ -1,11 +1,12 @@
 <div class="jumbrotron text-center">
-  <h5><%= greeting %></h5>
+  <h4><%= greeting %></h4>
 </div>
 <!--Drop Down Menu Selection Parameters-->
 <div class="select-menu">
   <form method="GET" action="/restaurants">
-  <label>Select Cuisine</label>
-  <select class="selectpicker" name="select_cuisine" id="select_cuisine">
+  <label>Cuisine</label>
+  <select class="selectpicker show-tick" name="select_cuisine" id="select_cuisine">
+    <option value="" disabled selected>Please Select</option>
     <option value="Thai">Thai</option>
     <option value="Chinese">Chinese</option>
     <option value="American">American</option>
@@ -22,21 +23,23 @@
     <option value="French">French</option>
     <option value="Peruvian">Peruvian</option>
   </select>
-  <label>Select Borough</label>
-  <select class="selectpicker" name="select_boro" id="select_boro">
+  <label>Borough</label>
+  <select class="selectpicker show-tick" name="select_boro" id="select_boro">
+    <option value="" disabled selected>Please Select</option>
     <option value="MANHATTAN">Manhattan</option>
     <option value="BROOKLYN">Brooklyn</option>
     <option value="BRONX">Bronx</option>
     <option value="QUEENS">Queens</option>
     <option value="STATEN ISLAND">Staten Island</option>
   </select>
-  <label>Select Grade</label>
-  <select class="selectpicker" name="select_grade" id="select_grade">
+  <label>Grade</label>
+  <select class="selectpicker show-tick" name="select_grade" id="select_grade">
+    <option value="" disabled selected>Please Select</option>
     <option value="A">A</option>
     <option value="B">B</option>
     <option value="C">C</option>
   </select>
-  <input type="submit" value="Search" />
+  <input type="submit" class="btn btn-info" value="Search" />
   </form>
 </div>
 <!--Query Output for Restaurant Lists-->
@@ -54,7 +57,7 @@
       </tr>
     </thead>
     <tbody>
-      <% for(i = 0; i < 10; i++) { %>
+      <% for(i = 0; i < 1; i++) { %>
         <tr>
           <td><%= restaurants[i].DBA %></td>
           <td><%= restaurants[i].CUISINE %></td>

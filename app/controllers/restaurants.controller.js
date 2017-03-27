@@ -11,9 +11,7 @@ function showRestaurants(req, res) {
   if(req.query.select_cuisine) {
     const greeting = "Please make a selection from the parameters below.";
     const parameters = req.query;
-    console.log(parameters);
     Restaurants.find({ CUISINE: parameters.select_cuisine, BORO: parameters.select_boro, GRADE: parameters.select_grade }, (err, restaurants) => {
-      console.log(restaurants[0]);
       res.render('pages/restaurants', {
           greeting: greeting,
           restaurants: restaurants
@@ -25,11 +23,12 @@ function showRestaurants(req, res) {
         CUISINE: "Type of Food",
         STREET: "Address",
         BORO: "NYC Borough",
+        ZIPCODE: "Zip",
+        PHONE: "Number",
         SCORE: "Violations Total. Lower is Better",
         GRADE: "A = Safe | B = You're Risking It | C = Avoid like the plague."
       }];
       const greeting = "Please make a selection from the parameters below.";
-      console.log(restaurants[0].DBA);
       res.render('pages/restaurants', {
           greeting: greeting,
           restaurants: restaurants
