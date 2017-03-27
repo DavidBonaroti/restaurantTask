@@ -1,0 +1,70 @@
+<div class="jumbrotron text-center">
+  <h5><%= greeting %></h5>
+</div>
+<!--Drop Down Menu Selection Parameters-->
+<div class="select-menu">
+  <form method="GET" action="/restaurants">
+  <label>Select Cuisine</label>
+  <select class="selectpicker" name="select_cuisine" id="select_cuisine">
+    <option value="Thai">Thai</option>
+    <option value="Chinese">Chinese</option>
+    <option value="American">American</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="Irish">Irish</option>
+    <option value="Creole">Creole</option>
+    <option value="Pizza">Pizza</option>
+    <option value="Creole">Creole</option>
+    <option value="Mexican">Mexican</option>
+    <option value="Indian">Indian</option>
+    <option value="Asian">Asian</option>
+    <option value="Italian">Italian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="French">French</option>
+    <option value="Peruvian">Peruvian</option>
+  </select>
+  <label>Select Borough</label>
+  <select class="selectpicker" name="select_boro" id="select_boro">
+    <option value="MANHATTAN">Manhattan</option>
+    <option value="BROOKLYN">Brooklyn</option>
+    <option value="BRONX">Bronx</option>
+    <option value="QUEENS">Queens</option>
+    <option value="STATEN ISLAND">Staten Island</option>
+  </select>
+  <label>Select Grade</label>
+  <select class="selectpicker" name="select_grade" id="select_grade">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+  </select>
+  <input type="submit" value="Search" />
+  </form>
+</div>
+<!--Query Output for Restaurant Lists-->
+<div class="table_data">
+  <table class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cuisine</th>
+        <th>Street</th>
+        <th>Boro</th>
+        <th>ZIP</th>
+        <th>Phone</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(i = 0; i < 10; i++) { %>
+        <tr>
+          <td><%= restaurants[i].DBA %></td>
+          <td><%= restaurants[i].CUISINE %></td>
+          <td><%= restaurants[i].STREET %></td>
+          <td><%= restaurants[i].BORO %></td>
+          <td><%= restaurants[i].ZIPCODE %></td>
+          <td><%= restaurants[i].PHONE %></td>
+          <td><%= restaurants[i].GRADE %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
