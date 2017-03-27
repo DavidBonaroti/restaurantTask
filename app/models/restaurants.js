@@ -14,7 +14,7 @@ const restaurantsSchema = new Schema({
   INSPECTION: String,
   SCORE: Number,
   GRADE: String
-}, { collection: 'restaurantData'});
+}, { collection: 'restaurantTask'});
 
 // Create Model
 const restaurantsModel = mongoose.model('Restaurants', restaurantsSchema);
