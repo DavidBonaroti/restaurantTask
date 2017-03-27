@@ -24,6 +24,8 @@ restaurants.ejs. Once a user makes parameters selections from the drop down menu
 function is activated again, however this time, the end point contains query params which validates the if statement. At this 
 time, the params are matched to the Restaurants (csv file) data model using the Mongoose find method. The application will output 
 the first restaurant that meets the parameters specified by the customer. If the for loop is extended to i < 10 after the inital visit,
-the application has no issue rendering 10 restaurants which satisfy the query parameters.
+the application has no issue rendering 10 restaurants which satisfy the query parameters. During the initial contact with /restaurants
+the application will fail due to the "restaurants" object length = 1. The console states that it cannot render an 'undefined' object 
+beyond the first loop. 
 
 Thank you. 
