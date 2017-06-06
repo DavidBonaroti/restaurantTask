@@ -1,8 +1,6 @@
 # restaurantTask
 NYC Inspection Data Restaurant Selection Application
 
-Hey Orchard Team,
-
 Within this README file, I would like to discuss the architecture of my application and some of the issues that I encountered
 during the creation process.
 
